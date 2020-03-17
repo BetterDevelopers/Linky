@@ -18,7 +18,7 @@ There are a few basic routes and examples of utilising URL params with routing.
 
 To get the dev server running:
 
-- clone this repo with `git clone https://github.com/shan5742/Linky.git`
+- clone this repo with `git clone https://github.com/BetterDevelopers/Linky.git`
 - install dependencies by running `yarn`
 - run `yarn start` from the project root
 
