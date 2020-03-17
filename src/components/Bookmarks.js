@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-
+import SampleData from "../sampleData";
+import Spinner from "../components/loading/Spinner";
 export default function Bookmarks(props) {
-  const data = require("../sampleData.json");
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setData(SampleData);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
+  if (loading) return <Spinner />;
   return (
     <PageWrapper>
       <h1>Bookmarks</h1>
