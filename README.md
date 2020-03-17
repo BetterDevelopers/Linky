@@ -4,11 +4,7 @@ Easily share links and booksmarks with firends and colleagues...
 
 ## Sample Data
 
-You can find a sample of what the data will look like in `sampleData.json`. The bookmark page is populated from this sample data.
-
-## Routing
-
-There are a few basic routes and examples of utilising URL params with routing.
+You can find a sample of what the data will look like in `sampleData.json`. The home page is populated from this sample data.
 
 ## Developing
 
