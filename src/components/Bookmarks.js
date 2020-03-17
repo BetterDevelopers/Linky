@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Blogs(props) {
+export default function Bookmarks(props) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -11,8 +11,7 @@ export default function Blogs(props) {
 
   return (
     <div>
-      <h1>Hello from the blog page</h1>
-      <h3>ID from router: {props.blogID}</h3>
+      <h1>Bookmarks</h1>
       <div>
         <h1>Fake API data</h1>
         {data.map(d => (

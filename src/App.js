@@ -3,8 +3,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import { Router, Link } from "@reach/router";
 import Home from "../src/components/Home";
-import Blogs from "./components/Blogs";
-import Videos from "./components/Videos";
+import Bookmarks from "./components/Bookmarks";
+import UrlParams from "./components/UrlParams";
 
 function App() {
   return (
@@ -14,13 +14,13 @@ function App() {
         <h1>Linky</h1>
       </header>
       <nav>
-        <Link to="/">Home Page</Link> <Link to="blogs/123">Blogs</Link>
-        <Link to="videos/abc">Videos</Link>
+        <Link to="/">Home Page</Link> <Link to="bookmarks">Bookmarks</Link>
+        <Link to="url/abc">URL Param example</Link>
       </nav>
       <Router>
         <Home path="/" />
-        <Blogs path="blogs/:blogID" />
-        <Videos path="videos/:videoID" />
+        <Bookmarks path="bookmarks" />
+        <UrlParams path="url/:params" />
       </Router>
     </div>
   );
