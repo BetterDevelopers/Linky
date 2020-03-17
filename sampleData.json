@@ -1,0 +1,59 @@
+{
+  "GET": "/root",
+  "bookmarkProfile": [
+    {
+      "id": 0,
+      "name": "corey",
+      "links": [
+        {
+          "id": "dias78tfda98sfdnl",
+          "name": "Motivational Video",
+          "url": "https://www.usefullink.com/",
+          "category": "videos",
+          "description": "Great video for motivation, must watch for when you bla bla bla"
+        },
+        {
+          "id": "dias78g94shbatwsp",
+          "name": "Docker Blog",
+          "url": "https://www.blabla.com/",
+          "category": "blog",
+          "description": "Stay up to date with Docker with this amazing blog"
+        },
+        {
+          "id": "ioyr22rtxx40sfdnl",
+          "name": "Learn Programming",
+          "url": "https://www.doshit.com/",
+          "category": "blog",
+          "description": "Learning how to learn"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "shan",
+      "links": [
+        {
+          "id": "uwlx62sird00bbbb",
+          "name": "RegEx CheatSheet",
+          "url": "https://www.FUCKREGEX.com/",
+          "category": "cheatsheets",
+          "description": "Fuck RegEx, FuckRegEx FuckRegEx"
+        },
+        {
+          "id": "wsop65wert67oozz",
+          "name": "Into to Firebase Functions",
+          "url": "https://www.fire.com/",
+          "category": "docs",
+          "description": "Get started with cloud functions from firebase"
+        },
+        {
+          "id": "zurw01mb5555as33",
+          "name": "React Hooks Offical",
+          "url": "https://www.reacthooks.com/",
+          "category": "docs",
+          "description": "Official docs on migrating to react hooks"
+        }
+      ]
+    }
+  ]
+}
