@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 
 export default function Bookmarks(props) {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then(response => response.json())
-      .then(json => setData(json));
-  }, []);
-
+  const data = require("../sampleData.json");
   return (
     <div>
       <h1>Bookmarks</h1>
       <div>
-        <h1>Fake API data</h1>
-        {data.map(d => (
+        {data.bookmarkProfile.map(d => (
           <div key={d.id}>
-            <h2>ID: {d.id}</h2>
-            <h2>Title: {d.title}</h2>
-            <h4>Body: {d.body}</h4>
+            <h1>Name: {d.name}</h1>
+            <h3>ID: {d.id}</h3>
+            <h1>Links</h1>
+            {d.links.map(l => (
+              <div key={l.id}>
+                <h2>{l.name}</h2>
+                <p>{l.description}</p>
+                <p>Category: {l.category}</p>
+                <a href={l.url}>{l.url}</a>
+              </div>
+            ))}
           </div>
         ))}
       </div>
