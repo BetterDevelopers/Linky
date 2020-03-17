@@ -1,27 +1,45 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
 export default function Bookmarks(props) {
   const data = require("../sampleData.json");
   return (
-    <div>
+    <PageWrapper>
       <h1>Bookmarks</h1>
       <div>
         {data.bookmarkProfile.map(d => (
           <div key={d.id}>
-            <h1>Name: {d.name}</h1>
-            <h3>ID: {d.id}</h3>
-            <h1>Links</h1>
-            {d.links.map(l => (
-              <div key={l.id}>
-                <h2>{l.name}</h2>
-                <p>{l.description}</p>
-                <p>Category: {l.category}</p>
-                <a href={l.url}>{l.url}</a>
-              </div>
-            ))}
+            <h1>Links from {d.name}</h1>
+            <LinkWrapper>
+              {d.links.map(l => (
+                <Box key={l.id}>
+                  <h2>{l.name}</h2>
+                  <p>{l.description}</p>
+                  <p>Category: {l.category}</p>
+                  <a href={l.url}>{l.url}</a>
+                </Box>
+              ))}
+            </LinkWrapper>
           </div>
         ))}
       </div>
-    </div>
+    </PageWrapper>
   );
 }
+
+const PageWrapper = styled.div`
+  margin: 20px;
+`;
+
+const Box = styled.div`
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  border: 3px solid black;
+  padding: 10px;
+`;
+
+const LinkWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
