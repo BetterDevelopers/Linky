@@ -40,12 +40,15 @@ export default function Bookmarks(props) {
 
 const PageWrapper = styled.div`
   margin: 20px;
+  text-align: center;
 `;
 
 const Box = styled.div`
   display: flex;
   width: 25%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 3px solid black;
   padding: 10px;
 `;

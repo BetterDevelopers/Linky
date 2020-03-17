@@ -1,29 +1,34 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Router, Link } from "@reach/router";
-import Home from "../src/components/Home";
+import { Router } from "@reach/router";
 import Bookmarks from "./components/Bookmarks";
-import UrlParams from "./components/UrlParams";
+import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Linky</h1>
-      </header>
-      <nav>
-        <Link to="/">Home Page</Link> <Link to="bookmarks">Bookmarks</Link>
-        <Link to="url/abc">URL Param example</Link>
-      </nav>
+    <PageWrapper>
+      <Header>
+        <LogoFont>Linky</LogoFont>
+      </Header>
       <Router>
-        <Home path="/" />
-        <Bookmarks path="bookmarks" />
-        <UrlParams path="url/:params" />
+        <Bookmarks path="/" />
       </Router>
-    </div>
+    </PageWrapper>
   );
 }
 
 export default App;
+
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Header = styled.div`
+  display: flex;
+  padding: 20px 50px;
+  background-color: violet;
+`;
+
+const LogoFont = styled.h1`
+  color: white;
+`;
